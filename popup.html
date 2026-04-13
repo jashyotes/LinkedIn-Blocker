@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      min-width: 150px;
+      padding: 10px;
+      font-family: sans-serif;
+    }
+    button {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    #challengeContainer {
+      display: none;
+      margin-top: 10px;
+    }
+    #challengeText {
+      font-family: monospace;
+      background: #f0f0f0;
+      padding: 4px;
+      user-select: all;
+    }
+  </style>
+</head>
+<body>
+  <button id="toggleButton">Loading...</button>
+  <button id="customDisableButton">Customized Disable</button>
+  <div id="challengeContainer">
+    <p>Type the characters below to confirm:</p>
+    <div id="challengeText"></div>
+    <input type="text" id="challengeInput" placeholder="Enter text here" />
+    <input type="number" id="customMinutesInput" placeholder="Minutes (e.g. 30)" min="1" max="60" style="display: none; margin-top: 5px;" />
+    <button id="confirmButton">Confirm</button>
+    <p id="errorMsg" style="color: red; display: none;">Incorrect — try again.</p>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
